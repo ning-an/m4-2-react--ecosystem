@@ -134,6 +134,25 @@ function IconButton(props) {
 }
 ```
 
+const Btn = styled.button`
+color: tomato;
+font-weight: bold;
+padding: 20px;
+
+&:hover,
+&:focus {
+transform: translateY(-3px);
+}
+`const Icon = styled.i`
+width: 32px;
+height: 32px;
+`
+function IconButton(props) {
+return (
+<Btn><Icon>{props.icon}</Icon>{props.children}</Btn>
+)
+}
+
 ---
 
 ### Exercise 3
@@ -167,14 +186,39 @@ function FantasticStory(props) {
 }
 ```
 
+const Paragraph = styled.p`
+font-size: 18px;
+line-height: 1.4;
+color: #333;
+
+strong {
+color: red;
+}
+
+em {
+color: #666;
+}
+`
+function FantasticStory(props) {
+return (
+
+<div>
+<Paragraph>
+The <strong>quick</strong> red fox jumped over the <em>lazy</em> dog.
+</Paragraph>
+<Paragraph>The end.</Paragraph>
+</div>
+);
+}
+
 ---
 
 ### Global styles
 
 ```jsx
-import {createGlobalStyles} from 'styled-components';
+import {createGlobalStyle} from 'styled-components';
 
-const GlobalStyles = createGlobalStyles`
+const GlobalStyles = createGlobalStyle`
   * {
     font-family: 'Lato', sans-serif;
   }
