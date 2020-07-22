@@ -6,4 +6,4 @@ import App from "./components/App";
 
 const rootElement = document.getElementById("root");
 
-ReactDOM.render(<App items={Object.values(items)} />, rootElement);
+ReactDOM.render(<App items={items} />, rootElement);

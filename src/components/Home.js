@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 
-const ListingGrid = styled.ul`
+export const ListingGrid = styled.ul`
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
@@ -22,7 +22,7 @@ const FruitLi = styled.li`
   flex-direction: column;
   align-items: center;
   justify-content: flex-end;
-  padding-bottom: 20px;
+  /* padding-bottom: 20px; */
   transition: all 0.5s ease-in;
 
   &:hover {
@@ -47,10 +47,12 @@ const FruitLi = styled.li`
   p {
     color: grey;
     font-style: italic;
+    padding-bottom: 20px;
+    margin-top: 0;
   }
 `;
 
-const Fruit = ({ item }) => {
+export const Fruit = ({ item }) => {
   const { id, name, latinName, imageSrc } = item;
   return (
     <FruitLi>
@@ -63,7 +65,7 @@ const Fruit = ({ item }) => {
   );
 };
 
-const Homepage = ({ items }) => {
+export const Homepage = ({ items }) => {
   return (
     <div>
       <p>Fruit emporium sells the finest fruits from this world and beyond.</p>
@@ -76,5 +78,3 @@ const Homepage = ({ items }) => {
     </div>
   );
 };
-
-export default Homepage;

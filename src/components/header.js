@@ -25,6 +25,9 @@ export const HeaderSec = () => {
           <NavLink to="/about" activeClassName="selected">
             About
           </NavLink>
+          <NavLink to="/sellers" activeClassName="selected">
+            Sellers
+          </NavLink>
         </div>
       </Header>
     </div>

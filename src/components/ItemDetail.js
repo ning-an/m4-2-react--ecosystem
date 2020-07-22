@@ -2,7 +2,7 @@ import React from "react";
 import { useParams } from "react-router-dom";
 import styled from "styled-components";
 
-import { items, sellers } from "../data";
+// import { items, sellers } from "../data";
 
 const ItemDetailInfo = styled.div`
   display: flex;
@@ -57,7 +57,7 @@ const ItemDetailInfo = styled.div`
     margin-right: 20px;
   }
 `;
-const ItemDetails = () => {
+const ItemDetails = ({ items, sellers }) => {
   const { itemId } = useParams();
   const item = items[itemId];
   const seller = sellers[item.sellerId];
